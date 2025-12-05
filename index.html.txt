@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asad Ullah — Portfolio (Template)</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --saudi-green: #006241;
+      --gold: #A07400;
+      --bg: #F8F9FA;
+      --text: #1A1A1A;
+      --muted: #4A4A4A;
+      --card: #FFFFFF;
+      --glass: rgba(255,255,255,0.6);
+      --maxwidth: 980px;
+      --radius: 12px;
+      --shadow: 0 6px 22px rgba(12,18,33,0.08);
+    }
+
+    *{box-sizing: border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+    body{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+
+    .container{max-width:var(--maxwidth);margin:40px auto;padding:24px}
+
+    /* NAV */
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--saudi-green),#0a704d);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:Poppins}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--text)}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:18px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));padding:28px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero h1{font-family:Poppins;font-size:28px;margin:0}
+    .hero p.tag{margin:8px 0 18px;color:var(--muted);font-weight:600}
+    .cta{display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:var(--saudi-green);color:white}
+    .btn-outline{background:transparent;border:2px solid var(--saudi-green);color:var(--saudi-green)}
+
+    .profile{display:flex;flex-direction:column;align-items:center;padding:18px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .profile img{width:220px;height:220px;border-radius:14px;object-fit:cover}
+    .profile small{color:var(--muted);margin-top:8px}
+
+    /* SECTIONS */
+    section{margin-top:22px}
+    .section-title{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .section-title h2{font-family:Poppins;margin:0}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+
+    /* two column */
+    .two-col{display:grid;grid-template-columns:1fr 380px;gap:22px}
+
+    /* SKILLS */
+    .skills-grid{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{background:linear-gradient(180deg,#fff,#f6f6f6);padding:8px 12px;border-radius:999px;border:1px solid #eee;font-weight:600;color:var(--muted)}
+
+    /* EXPERIENCE */
+    .exp-item{margin-bottom:14px}
+    .exp-meta{display:flex;justify-content:space-between;color:var(--muted);font-weight:600}
+    .bullets{margin:12px 0 0;padding-left:18px;color:var(--muted)}
+
+    /* Certificates */
+    .cert-grid{display:flex;flex-wrap:wrap;gap:12px}
+    .cert{background:#fcfcfc;padding:10px;border-radius:10px;border:1px solid #eee;min-width:220px}
+    .cert small{color:var(--muted)}
+
+    /* PROJECT */
+    .project{display:flex;gap:12px;align-items:center}
+    .project img{width:160px;height:90px;object-fit:cover;border-radius:8px}
+
+    /* EXTRAS */
+    footer{margin-top:36px;text-align:center;color:var(--muted);font-size:14px;padding:22px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .two-col{grid-template-columns:1fr}
+      .hero-card{order:2}
+      .profile{order:1}
+    }
+
+    /* Subtle animations */
+    .fade-up{opacity:0;transform:translateY(10px);animation:fadeUp .6s ease forwards}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="brand">
+        <div class="logo">AU</div>
+        <div>
+          <div style="font-weight:700">Asad Ullah</div>
+          <div style="font-size:12px;color:var(--muted)">Logistics & Supply Chain Enthusiast</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-card fade-up">
+        <h1>Hi, I am <span style="color:var(--saudi-green)">Asad Ullah</span></h1>
+        <p class="tag">Logistics & Supply Chain Enthusiast | Warehouse Operations | Inventory Accuracy | Transport & Dispatch Coordination</p>
+        <p style="color:var(--muted);line-height:1.6">I am an adaptable, disciplined, and detail-oriented professional seeking opportunities in Logistics & Warehouse Operations. I focus on accuracy, responsibility, and time management to ensure warehouse operations run smoothly and efficiently.</p>
+
+        <div style="margin-top:18px" class="cta">
+          <button class="btn btn-primary">Download CV</button>
+          <a href="#contact"><button class="btn btn-outline">Contact Me</button></a>
+        </div>
+
+        <div style="margin-top:16px;color:var(--muted);font-size:13px">Arabic: مرحباً، أنا أسد الله</div>
+      </div>
+
+      <aside class="profile fade-up">
+        <img src="images/profile.jpg" alt="Asad Ullah — profile photo" onerror="this.src='data:image/svg+xml;charset=utf-8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\'><rect width=\'100%\' height=\'100%\' fill=\'%23006241\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle' font-family=\'Poppins\' font-size=\'48' fill=\'white' >AS</text></svg>'">
+        <small>Logistics & Supply Chain Enthusiast • D.Pharm (Pursuing)</small>
+      </aside>
+
+    </div>
+
+    <!-- MAIN SECTIONS -->
+    <main>
+
+      <section id="about">
+        <div class="section-title"><h2>About Me</h2></div>
+        <div class="card fade-up">
+          <p>I am an adaptable, disciplined, and detail-oriented professional seeking opportunities in Logistics & Warehouse Operations, including roles such as Logistics Coordinator, Warehouse Assistant, Inventory Assistant, and Transport Assistant. I focus on accuracy, responsibility, and time management, ensuring that warehouse operations run smoothly and efficiently. I am committed to improving processes, collaborating effectively with teams, and contributing to reliable and organized supply chain operations.</p>
+        </div>
+      </section>
+
+      <section class="two-col" style="margin-top:18px">
+        <div>
+          <div id="experience" class="section-title"><h2>Experience</h2></div>
+          <div class="card fade-up">
+            <div class="exp-item">
+              <div style="font-weight:700">Business Operations Executive — Alhabib Trader (Family-run)</div>
+              <div class="exp-meta">Jan 2019 – Mar 2020 <span>Prayagraj</span></div>
+              <ul class="bullets">
+                <li>Managed customer interactions and ensured client satisfaction.</li>
+                <li>Tracked inventory of raw materials and finished products.</li>
+                <li>Oversaw labor supervision, warehouse workflow, and product handling.</li>
+                <li>Gained hands-on experience in management, warehouse operations, and logistics for a mid-sized wood mill business.</li>
+              </ul>
+            </div>
+
+            <div class="exp-item" style="margin-top:14px">
+              <div style="font-weight:700">Accounting & Data Entry Assistant — Private Real Estate Firm (PRF)</div>
+              <div class="exp-meta">Present — 4 months <span>Prayagraj</span></div>
+              <ul class="bullets">
+                <li>Handled financial transactions and bookkeeping (~50+ transactions/month).</li>
+                <li>Performed accurate data entry of financial records.</li>
+                <li>Developed attention to detail and ensured financial accuracy.</li>
+                <li>Contributed to efficient record-keeping and reporting.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <section style="margin-top:18px">
+            <div class="section-title"><h2>Projects</h2></div>
+            <div class="card fade-up project">
+              <img src="images/vigna.jpg" alt="Vigna radiata project" onerror="this.style.display='none'">
+              <div>
+                <div style="font-weight:700">Studies on the effect of hydrogen peroxide in chromium-induced stress in Vigna radiata (2024)</div>
+                <p style="margin:6px 0;color:var(--muted)">Conducted growth and germination analysis, monitored soil & water usage, and analyzed data to identify factors affecting productivity.</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <aside>
+          <div id="skills" class="section-title"><h2>Skills</h2></div>
+          <div class="card fade-up">
+            <div style="font-weight:700;margin-bottom:10px">Core Logistics & Supply Chain</div>
+            <div class="skills-grid">
+              <span class="chip">Warehouse Operations</span>
+              <span class="chip">Inventory Management</span>
+              <span class="chip">Transport Coordination</span>
+              <span class="chip">Procurement Basics</span>
+              <span class="chip">Labor Supervision</span>
+            </div>
+
+            <div style="height:12px"></div>
+            <div style="font-weight:700;margin-bottom:10px">Technical / Software</div>
+            <div class="skills-grid">
+              <span class="chip">Microsoft Excel (Advanced)</span>
+              <span class="chip">Power BI</span>
+              <span class="chip">PowerPoint</span>
+              <span class="chip">AutoCAD (Basic)</span>
+              <span class="chip">Data Entry</span>
+            </div>
+
+            <div style="height:12px"></div>
+            <div style="font-weight:700;margin-bottom:10px">Professional Skills</div>
+            <div class="skills-grid">
+              <span class="chip">Attention to Detail</span>
+              <span class="chip">Time Management</span>
+              <span class="chip">Team Collaboration</span>
+              <span class="chip">Communication</span>
+            </div>
+          </div>
+
+          <div style="height:18px"></div>
+
+          <div class="section-title"><h2>Certificates</h2></div>
+          <div class="card fade-up cert-grid">
+            <div class="cert">
+              <div style="font-weight:700">Lean Six Sigma White Belt</div>
+              <small>Six Sigma Online — 10 Aug 2025</small>
+            </div>
+            <div class="cert">
+              <div style="font-weight:700">Introduction to Supply Chain Management</div>
+              <small>Simplilearn — 7 Aug 2025</small>
+            </div>
+            <div class="cert">
+              <div style="font-weight:700">Power BI Workshop</div>
+              <small>Office Master — 26 Oct 2025</small>
+            </div>
+          </div>
+
+          <div style="height:18px"></div>
+
+          <div class="section-title"><h2>Languages</h2></div>
+          <div class="card fade-up">
+            <ul style="margin:0;padding-left:18px;color:var(--muted)">
+              <li>Arabic — Working Proficiency</li>
+              <li>English — Fluent</li>
+              <li>Hindi — Fluent</li>
+              <li>Urdu — Fluent</li>
+            </ul>
+          </div>
+
+        </aside>
+      </section>
+
+      <section id="contact" style="margin-top:18px">
+        <div class="section-title"><h2>Contact</h2></div>
+        <div class="card fade-up">
+          <p style="margin:0 0 8px">Email: <a href="mailto:asadullah3402@gmail.com">asadullah3402@gmail.com</a></p>
+          <p style="margin:0 0 8px">Phone / WhatsApp: +91 8318013402</p>
+          <p style="margin:0">LinkedIn: <a href="https://www.linkedin.com/in/asadullah-logistics" target="_blank">linkedin.com/in/asadullah-logistics</a></p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> Asad Ullah. All rights reserved.
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // simple animation trigger
+    window.addEventListener('load', ()=>{
+      document.querySelectorAll('.fade-up').forEach((el,i)=>{el.style.animationDelay=(0.08*i)+'s'})
+    })
+  </script>
+
+</body>
+</html>
